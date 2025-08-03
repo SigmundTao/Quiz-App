@@ -1,0 +1,290 @@
+:root {
+    --primary: red;
+    --secondary: white;
+    --tertiary: rgba(255, 255, 255, 0.75);
+    --accent: maroon;
+    --easy: limegreen;
+    --easy2: darkgreen;
+    --easy-accent: #214313;
+    --medium: #FC6F01;
+    --medium2: #984200;
+    --medium-accent: #592700;
+    --hard: red;
+    --hard2: maroon;
+    --hard-accent: #590200;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    padding-top: 10vh;
+}
+
+#navbar {
+    height: 10vh;
+    background-color: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-right: 2vw;
+    box-shadow: 0px 3px 0px 0px var(--accent);
+}
+
+#nav-items {
+    list-style: none;
+    display: flex;
+    width: 40%;
+    max-width: 200px;
+    min-width: 100px;
+    gap: 2vw;
+    font-size: 0.5em;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--tertiary);
+    padding-right: 5vw;
+}
+
+.nav-item:hover {
+    color: white;
+    cursor: pointer;
+}
+
+#title {
+    position: fixed;
+    left: 50%;
+    top: 1vh;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+    font-size: 1.75rem;
+}
+
+#title:hover {
+    cursor: pointer;
+}
+
+#diff-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    width: 100%;
+    gap: 2vw;
+    border: 1px solid black;
+}
+
+.diff-selector {
+    border: 1px solid black;
+    height:60%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    max-width: 150px;
+    border-radius: 3px;
+    transition: transform 0.3s ease;
+    color: var(--secondary);
+}
+
+.diff-selector:hover {
+    transform: scale(1.1);
+}
+
+.diff-selector button {
+    width: 50%;
+    height: 10%;
+    background-color: inherit;
+    border: 1px solid black;
+    border-radius: 3px;
+    color: var(--secondary);
+    font-size: 0.6rem;
+    font-weight: bold;
+}
+
+.features-div {
+    width: 100%;
+    height: 70%;
+    padding: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--tertiary);
+    border: 1px solid black;
+}
+
+.diff-title {
+    margin: 0;
+    font-size: 1rem;
+    padding: 0;
+}
+
+.diff-subtitle {
+    margin: 0;
+    padding: 0;
+    font-size: 0.5rem;
+}
+
+.title-holder {
+    height: 15%;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.features {
+    margin: 0;
+    font-size: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    color: white;
+}
+
+.diff-selector button:hover {
+    cursor: pointer;
+}
+
+/* Easy mode styling */
+#easy-diff {
+    background-color: var(--easy);
+    border-color: var(--easy-accent);
+}
+
+#easy-diff .features-div {
+    background-color: var(--easy2);
+    border-color: var(--easy-accent);
+}
+
+#easy-diff button {
+    border-color: var(--easy-accent);
+}
+
+#easy-diff button:hover {
+    background-color: var(--easy2);
+}
+
+/* Medium mode styling */
+#medium-diff {
+    background-color: var(--medium);
+    border-color: var(--medium-accent);
+}
+
+#medium-diff .features-div {
+    background-color: var(--medium2);
+    border-color: var(--medium-accent);
+}
+
+#medium-diff button {
+    border-color: var(--medium-accent);
+}
+
+#medium-diff button:hover {
+    background-color: var(--medium2);
+}
+
+/* Hard mode styling */
+#hard-diff {
+    background-color: var(--primary);
+    border-color: var(--hard-accent);
+}
+
+#hard-diff .features-div {
+    background-color: var(--hard2);
+    border-color: var(--hard-accent);
+}
+
+#hard-diff button {
+    border-color: var(--hard-accent);
+}
+
+#hard-diff button:hover {
+    background-color: var(--hard2);
+}
+
+.question-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 30vh;
+    width: 50vw;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    padding: 5px;
+    color: var(--secondary);
+}
+
+.question-holder {
+    height: 50%;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 0.75rem;
+    padding: 3%
+}
+
+.question-difficulty {
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.user-input {
+    display: flex;
+    width: 100%;
+    height: 20%;
+    justify-content: center;
+    
+}
+
+.user-input button {
+    width: 20%;
+    font-size: 0.5rem;
+}
+
+.user-answer {
+    width: 80%;
+    font-size: 0.5rem;
+}
+
+.easy-question {
+    background-color: var(--easy);
+    border-color: var(--easy-accent);
+}
+
+.easy-question .question-holder {
+    background-color: var(--easy2);
+    border-color: var(--easy-accent);
+}
+
