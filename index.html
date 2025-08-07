@@ -3,72 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz App</title>
-    <link rel="stylesheet" href="style.css">
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav id="navbar">
-        <ul id="nav-items">
-            <li class="nav-item"><a>How to play</a></li>
-            <li class="nav-item"><a>Leaderboard</a></li>
-        </ul>
-        <h1 id="title">Quizzed</h1>
-    </nav>
-    <main id="main">
-        <nav id="navbar">
-        <ul id="nav-items">
-            <li class="nav-item"><a>How to play</a></li>
-            <li class="nav-item"><a>Leaderboard</a></li>
-        </ul>
-        <h1 id="title">Quizzed</h1>
-    </nav>
-    <div id="diff-holder">
-        <div id="easy-diff" class="diff-selector">
-            <div class="title-holder">  
-                <h2 class="diff-title">Easy</h2>
-                <p class="diff-subtitle">Even kids can play</p>
-            </div>
-            <div class="features-div">
-                <ul class="features">
-                    <li>Less challenging questions</li>
-                    <li>No pressure</li>
-                    <li>Fun for the family</li>
-                </ul>
-            </div>
-            <button id="easy-btn">Play</button>
-        </div>
-        <div id="hard-diff" class="diff-selector">
-            <div class="title-holder">
-                <h2 class="diff-title">Hard</h2>
-                <p class="diff-subtitle">For the extreme</p>
-            </div>
-            <div class="features-div">
-                <ul class="features">
-                    <li>Extremely challenging questions</li>
-                    <li>All the pressure</li>
-                    <li>Earn your spot on the leaderboards</li>
-                </ul>
-            </div>
-            <button id="hard-btn">Play</button>
-        </div>
-        <div id="medium-diff" class="diff-selector">
-            <div class="title-holder">
-                <h2 class="diff-title">Medium</h2>
-                <p class="diff-subtitle">Even kids can play</p>
-            </div>
-            <div class="features-div">
-                <ul class="features">
-                    <li>Less challenging questions</li>
-                    <li>No pressure</li>
-                    <li>Fun for the family</li>
-                </ul>
-            </div>
-            <button id="medium-btn">Play</button>
-        </div>
-        
+    <div id="to-do-container">
+        <h2>To Do:</h2>
+        <div id="task-holder"></div>
+        <button id="add-task">+</button>
     </div>
-    <script src="script.js"></script>
-    </main>
-    
+    <dialog id="task-modal">
+        <div id="modal-holder">
+            <h2 id="modal-title"></h2>
+            <label for="task-name-input" id="modal-input-label">Task:</label>
+            <input id="task-name-input">
+            <label for="task-description-input" id="modal-info-label">Description:</label>
+            <input id="task-description-input">
+            <div id="modal-button-holder">
+                <button id="save-btn">+</button>
+                <button id="close-modal-btn">x</button>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="script.js">
+
+    </script>
 </body>
 </html>
